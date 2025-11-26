@@ -60,7 +60,7 @@ export default function Register() {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <Text style={styles.title}>Create Account</Text>
-      <Text style={styles.subtitle}>Join CampusGuide and explore courses!</Text>
+      <Text style={styles.subtitle}>Join Fitbuddy and explore exercises!</Text>
 
       <TouchableOpacity onPress={pickImage} style={styles.avatarWrapper}>
         <Image
