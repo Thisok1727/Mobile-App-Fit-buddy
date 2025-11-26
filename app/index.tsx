@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
-import { useRouter } from "expo-router";
-import { useAuthStore } from "../src/store/useAuthStore";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
+import React, { useState } from "react";
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { useAuthStore } from "../src/store/useAuthStore";
 
 export default function Login() {
   const router = useRouter();
@@ -24,8 +24,8 @@ export default function Login() {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <Text style={styles.title}>CampusGuide</Text>
-      <Text style={styles.subtitle}>Welcome back! Please login to continue</Text>
+      <Text style={styles.title}>FitBuddy</Text>
+      <Text style={styles.subtitle}>Welcome to FitBuddy! Login to continue</Text>
 
       {/* Email Input */}
       <View style={styles.inputWrapper}>
@@ -56,7 +56,7 @@ export default function Login() {
 
       {/* Login Button */}
       <TouchableOpacity style={styles.btn} onPress={handleLogin}>
-        <Text style={styles.btnText}>Login</Text>
+        <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
       {/* Create Account Link */}
@@ -76,10 +76,10 @@ const styles = StyleSheet.create({
     paddingTop: 120,
   },
   title: {
-    fontSize: 34,
-    fontWeight: "800",
-    color: "#0066ff",
-    marginBottom: 10,
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#34C759",
+    marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
@@ -112,25 +112,20 @@ const styles = StyleSheet.create({
   },
   btn: {
     width: "100%",
-    backgroundColor: "#0066ff",
-    paddingVertical: 15,
-    borderRadius: 12,
-    marginTop: 10,
-    shadowColor: "#0066ff",
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 6,
+    backgroundColor: "#34C759",
+    padding: 15,
+    borderRadius: 10,
+    alignItems: "center",
+    marginTop: 20,
   },
-  btnText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "700",
-    textAlign: "center",
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
   },
   createText: {
     marginTop: 25,
-    color: "#0066ff",
+    color: "#34C759",
     fontWeight: "600",
     fontSize: 15,
   },
